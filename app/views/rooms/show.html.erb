@@ -1,8 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <strong>Price:</strong>
   <%= @room.price %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+<%= image_tag @room.room_image.url if @room.room_image? %>
 </p>
 
 <p>

@@ -12,6 +12,17 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
 
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ .navbar-default .navbar-nav > li > a {
+   color: black;
+   font-size: 1em;
+ }
+
+.navbar{
+  background-color: white;
+
+}

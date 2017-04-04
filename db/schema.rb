@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403050527) do
+ActiveRecord::Schema.define(version: 20170403062646) do
 
   create_table "rooms", force: :cascade do |t|
     t.integer  "price"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20170403050527) do
     t.boolean  "parties"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "room_image"
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 

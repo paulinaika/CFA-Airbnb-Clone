@@ -5,9 +5,10 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Price</th>
-      <th>Description</th>
       <th>Title</th>
+      <th>Description</th>
       <th>User</th>
       <th>Capacity</th>
       <th>Pets</th>
@@ -24,9 +25,10 @@
   <tbody>
     <% @rooms.each do |room| %>
       <tr>
+        <td><%= room.room_image %></td>
         <td><%= room.price %></td>
-        <td><%= room.description %></td>
         <td><%= room.title %></td>
+        <td><%= room.description %></td>
         <td><%= room.user %></td>
         <td><%= room.capacity %></td>
         <td><%= room.pets %></td>

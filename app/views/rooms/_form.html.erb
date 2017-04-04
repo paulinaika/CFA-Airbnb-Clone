@@ -11,58 +11,63 @@
     </div>
   <% end %>
 
+  <div class = "field">
+    <%= f.file_field :room_image %> <br>
+    <%= f.hidden_field :room_image_cache %>
+    </div>
+
   <div class="field">
-    <%= f.label :price %>
+    <%= f.label :price %><br>
     <%= f.number_field :price %>
   </div>
 
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :title %>
+    <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :capacity %>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :capacity %><br>
     <%= f.number_field :capacity %>
   </div>
 
   <div class="field">
-    <%= f.label :pets %>
+    <%= f.label :pets %><br>
     <%= f.check_box :pets %>
   </div>
 
   <div class="field">
-    <%= f.label :smoking %>
+    <%= f.label :smoking %><br>
     <%= f.check_box :smoking %>
   </div>
 
   <div class="field">
-    <%= f.label :wifi %>
+    <%= f.label :wifi %><br>
     <%= f.check_box :wifi %>
   </div>
 
   <div class="field">
-    <%= f.label :bathrooms %>
+    <%= f.label :bathrooms %><br>
     <%= f.check_box :bathrooms %>
   </div>
 
   <div class="field">
-    <%= f.label :bath %>
+    <%= f.label :bath %><br>
     <%= f.check_box :bath %>
   </div>
 
   <div class="field">
-    <%= f.label :share %>
+    <%= f.label :share %><br>
     <%= f.check_box :share %>
   </div>
 
   <div class="field">
-    <%= f.label :parties %>
+    <%= f.label :parties %><br>
     <%= f.check_box :parties %>
   </div>
 
