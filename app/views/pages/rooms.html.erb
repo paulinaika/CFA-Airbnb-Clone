@@ -6,7 +6,7 @@
 
 <h1>Rooms</h1>
 
-<table class= "table table-stripped">
+<table class= "table table-striped">
   <thead>
     <tr>
       <th>Price</th>
@@ -29,19 +29,19 @@
   <tbody>
     <% current_user.rooms.each do |room| %>
       <tr>
-        <td>AUD$<%= room.price %></td>
+        <td><%= number_to_currency (room.price) %></td>
         <td><%= room.title %></td>
         <td><%= room.description %></td>
         <td><%= image_tag room.room_image, size: "50"%></td>
         <td><%= room.user.email %></td>
-        <td><%= room.capacity %></td>
-        <td><%= room.pets %></td>
-        <td><%= room.smoking %></td>
-        <td><%= room.wifi %></td>
-        <td><%= room.bathrooms %></td>
-        <td><%= room.bath %></td>
-        <td><%= room.share %></td>
-        <td><%= room.parties %></td>
+        <td><%= yes_no room.capacity %></td>
+        <td><%= yes_no room.pets %></td>
+        <td><%= yes_no room.smoking %></td>
+        <td><%= yes_no room.wifi %></td>
+        <td><%= yes_no room.bathrooms %></td>
+        <td><%= yes_no room.bath %></td>
+        <td><%= yes_no room.share %></td>
+        <td><%= yes_no room.parties %></td>
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
