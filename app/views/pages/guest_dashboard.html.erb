@@ -1,3 +1,45 @@
 <h1>Guest Dashboard</h1>
 
 <p>See all of your bookings here</p>
+
+<%= @approved_bookings.inspect %>
+<%= @pending_bookings.inspect %>
+
+<h3>Ready for Payment</h3>
+
+<table class= "table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Start
+            </th>
+            <th>
+                End
+            </th>
+            <th>
+                Cost
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Payment Button
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <% @approved_bookings.each do |booking| %>
+        <tr>
+          <td><%= booking.start_date %></td>
+          <td><%= booking.end_date %></td>
+          <td><%= number_to_currency (booking.room.price) %></td>
+          <td><%= booking.room.title %></td>
+          <td><%= render 'partials/stripe', booking: booking %></td>
+        </tr>
+        <%end%>
+  </tbody>
+</table>
+
+
+<h3>Pending for Approval</h3>

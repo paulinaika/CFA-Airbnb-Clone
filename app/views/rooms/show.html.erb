@@ -9,8 +9,13 @@
 
 <p>
 <strong>Image:</strong>
-<%= image_tag @room.room_image.url if @room.room_image? %>
+<% @room.room_image.each do |image| %>
+  <img src="<%= image.url %>">
+<% end %>
+<%#= image_tag @room.room_image.url if @room.room_image? %>
 </p>
+
+
 
 <p>
   <strong>Description:</strong>

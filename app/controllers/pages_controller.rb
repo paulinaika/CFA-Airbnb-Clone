@@ -11,6 +11,9 @@ end
 
 def guest_dashboard
 @bookings = current_user.bookings
+@approved_bookings = @bookings.approved
+@pending_bookings = @bookings.pending
+
 end
 
 end
