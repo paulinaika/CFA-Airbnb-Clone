@@ -5,6 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#testing gem
+gem 'rspec-rails', '~> 3.5'  
+gem 'rails-controller-testing'
+gem 'pry'
+
 gem 'devise'
 gem 'gravatar-ultimate'
 gem 'xmlrpc'
