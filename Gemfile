@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 #testing gem
-gem 'rspec-rails', '~> 3.5'  
+
+gem 'rspec-rails', '~> 3.5'
 gem 'rails-controller-testing'
 gem 'pry'
 
